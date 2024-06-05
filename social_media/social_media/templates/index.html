@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0; 
+            padding: 0;
+            background-image: url('https://ipur.nus.edu.sg/wp-content/uploads/2021/10/blocks-compressed-scaled.jpg');
+            background-size: 100% 400%;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-title {
+            margin-left: 10px;
+        }
+        .container {
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px auto;
+            max-width: 500px; /* Optionally limit the max width */
+        }
+        h1 {
+            color: #ffffff;
+        }
+        p {
+            color: #ffffff;
+        }
+        button {
+            background-color: #3498db;
+            color: #111827;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar-title">
+            <h2>Fake Social Media Analyzer</h2>
+        </div>
+        <div class="navbar-links">
+            <a href="/save_profile">Profile</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Profile Analyzer</h2>
+        <p>Add profile details and get results.</p>
+        <a href="/analyze"><button>Continue</button></a>
+    </div>
+    <div class="container">
+        <h2>Chat/Comment Analyzer</h2>
+        <p>Analyze chat to find sentiments of user.</p>
+        <a href="/chat"><button>Continue</button></a>
+    </div>
+</body>
+</html>

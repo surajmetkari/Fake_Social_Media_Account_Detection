@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://ipur.nus.edu.sg/wp-content/uploads/2021/10/blocks-compressed-scaled.jpg');
+            background-size: 100% 400%;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .contentform {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 70vh; /* Set maximum height for scrolling */
+        }
+
+        .results {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .data-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-value {
+            font-size: 1em;
+            color: #ffffff;
+        }
+
+        .title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .result-container {
+            background: #007bff; /* Blue color */
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-value {
+            font-size: 1em;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container contentform">
+        <h4 class="title">Profile Analyzer</h4>
+        <div class="data-container">
+            <label>Name:</label>
+            <span class="data-value">{{ data['name'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Username:</label>
+            <span class="data-value">{{ data['username'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Email:</label>
+            <span class="data-value">{{ data['email'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Mobile:</label>
+            <span class="data-value">{{ data['mobile'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Bio:</label>
+            <span class="data-value">{{ data['bio'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Sex:</label>
+            <span class="data-value">{{ data['sex'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Statuses Count:</label>
+            <span class="data-value">{{ data['statuses_count'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Followers:</label>
+            <span class="data-value">{{ data['followers'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Friends:</label>
+            <span class="data-value">{{ data['friends'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Favourites:</label>
+            <span class="data-value">{{ data['favourites'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Listed Count:</label>
+            <span class="data-value">{{ data['listed_count'] }}</span>
+        </div>
+        <div class="data-container">
+            <label>Language:</label>
+            <span class="data-value">{{ data['lang'] }}</span>
+        </div>
+        <div class="result-container">
+            <label>Result:</label>
+            <span class="result-value">{{ result }}</span>
+        </div>
+    </div>
+</body>
+
+</html>

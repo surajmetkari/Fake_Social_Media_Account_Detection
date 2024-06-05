@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat/Comment Analyzer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0; 
+            padding: 0;
+            background-image: url('https://ipur.nus.edu.sg/wp-content/uploads/2021/10/blocks-compressed-scaled.jpg');
+            background-size: 100% 400%;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            text-align: center;
+        }
+
+        .navbar h4 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contentform {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .results {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 1em;
+            color: #333;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.5s ease;
+        }
+
+        textarea:focus {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-info {
+            background-color: #3498DB;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-info:hover {
+            background-color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+    </nav>
+
+    <form method="POST" class="contentform">
+        <h4 class="mt-4 mb-4" style="color:rgb(255, 255, 255);">Chat/Comment Analyzer</h4>
+        <textarea id="text" name="text" rows="6" required="required"></textarea>
+        <br>
+        <button type="submit" class="btn btn-lg btn-info">Submit</button>
+        <div class="results">
+            {% if predicted_label %}
+            <h4>Analyzed Label: {{ predicted_label }}</h4>
+            {% endif %}
+        </div>
+    </form>
+</body>
+
+</html>

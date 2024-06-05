@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Creation</title>
+    <style>
+        body {
+            margin: 0; 
+            padding: 0;
+            background-image: url('https://ipur.nus.edu.sg/wp-content/uploads/2021/10/blocks-compressed-scaled.jpg');
+            background-size: 100% 400%;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-title {
+            margin-left: 10px;
+        }
+        .container {
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px auto;
+            width: 90%; /* Adjusted width */
+            max-width: 600px; /* Optionally limit the max width */
+        }
+        h2, p {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        input[type="text"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #111827;
+        }
+        button {
+            background-color: #3498db;
+            color: #111827;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px auto; /* Center the button */
+            display: block; /* Ensure button takes full width */
+        }
+        button:hover {
+            background-color: #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar-title">
+            <h2>Fake Social Media Analyzer</h2>
+        </div>
+        <div class="navbar-links">
+            <a href="/logout">Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Profile Creation</h2>
+        <p>Add profile details and get results.</p>
+        <form action="/save_profile" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email Id:</label>
+            <input type="text" id="email" name="email" required><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required><br>
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" required></textarea><br>
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="2">Male</option>
+                <option value="-2">Female</option>
+                <option value="0">Other</option>
+            </select><br>
+            <label for="statuses_count">Statuses Counts:</label>
+            <input type="number" id="statuses_count" name="statuses_count" required><br>
+            <label for="followers">Followers:</label>
+            <input type="number" id="followers" name="followers" required><br>
+            <label for="friends">Friends:</label>
+            <input type="number" id="friends" name="friends" required><br>
+            <label for="favourites">Favourites:</label>
+            <input type="number" id="favourites" name="favourites" required><br>
+            <label for="listed_count">Listed Count:</label>
+            <input type="number" id="listed_count" name="listed_count" required><br>
+            <label for="lang">Language:</label>
+            <select id="lang" name="lang" required>
+                <option value="0">de</option>
+                <option value="1">en</option>
+                <option value="2">es</option>
+                <option value="3">fr</option>
+                <option value="4">gl</option>
+                <option value="5">it</option>
+                <option value="6">nl</option>
+                <option value="7">tr</option>
+            </select><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
